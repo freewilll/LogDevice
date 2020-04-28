@@ -33,7 +33,7 @@ ExternalProject_Add(rocksdb
         -DWITH_ZLIB=ON
         -DWITH_ZSTD=ON
         -DCMAKE_POSITION_INDEPENDENT_CODE=True
-    INSTALL_COMMAND make install DESTDIR=${LOGDEVICE_STAGING_DIR}
+    INSTALL_COMMAND $(MAKE) install DESTDIR=${LOGDEVICE_STAGING_DIR}
     )
 
 ExternalProject_Get_Property(rocksdb BINARY_DIR)
